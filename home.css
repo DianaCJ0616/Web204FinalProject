@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #5446ac;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.topnav a.active {
+    background-color: #4caf9b;
+    border-radius: 5px;
+}
+
+.topnav .icon {
+    display: block; 
+    cursor: pointer;
+}
+
+#myLinks {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+}
+
+#myLinks a {
+    text-align: left;
+    padding: 10px;
+    border-top: 1px solid #555;
+    color: white;
+}
+
+#myLinks a:hover {
+    background-color: #575757;
+}
