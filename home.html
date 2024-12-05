@@ -12,7 +12,7 @@
 <body>
     <header class="home-head">
         <div class="hamburger">
-            <h1>Home Page</h1>
+            <p>Home Page</p>
             <!-- Hamburger Menu Icon -->
             <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
@@ -29,27 +29,60 @@
     </header>
     <main>
         <section class="name-about">
-            <h2>Angel's Lawn Maintenance Inc.</h2>
+            <h1 id="company-name">Angel's Lawn<br>Maintenance Inc.</h1>
             <div class="home-about">
                 <h2>About Us</h2>
-                <p>Angel's Lawn Maintenance Inc. began as a dedicated lawn care company focused on creating and
-                    maintaining beautiful outdoor spaces. Over time, we expanded our services to include professional
-                    construction and remodeling, as well as comprehensive cleaning solutions.</p>
-                <p>From expertly maintained lawns to outdoor transformations and spotless interiors, we take pride in
-                    delivering quality, reliability, and customer satisfaction. Whether you need a vibrant landscape, a
-                    remodeled space, or a clean and welcoming environment, Angel's Lawn Maintenance Inc. is here to
-                    bring your vision to life.</p>
+                <div id="home-about-text">
+                    <p>Angel's Lawn Maintenance Inc. began as a dedicated lawn care company focused on creating and
+                        maintaining beautiful outdoor spaces. Over time, we expanded our services to include
+                        professional
+                        construction and remodeling, as well as comprehensive cleaning solutions.</p>
+                    <p>From expertly maintained lawns to outdoor transformations and spotless interiors, we take pride
+                        in
+                        delivering quality, reliability, and customer satisfaction. Whether you need a vibrant
+                        landscape, a
+                        remodeled space, or a clean and welcoming environment, Angel's Lawn Maintenance Inc. is here to
+                        bring your vision to life.</p>
+                </div>
             </div>
         </section>
         <section class="lawn-section">
-            <h2>Angel's Lawn Maintenance</h2>
-            <p></p>
+            <div class="home-sect-container">
+                <div class="home-sect-text">
+                    <h2>Angel's Lawn Maintenance</h2>
+                    <p>Transform your outdoor spaces with our expert lawn care and landscaping services. From routine
+                        maintenance to stunning custom designs, we create vibrant, healthy lawns that stand out.</p>
+                </div>
+                <div class="home-icon">
+                    <img src="LawnLogo.png" alt="LawnIcon" class="business-icon">
+                </div>
+            </div>
         </section>
         <section class="construction-section">
-            <h2>Angel's Remodeling</h2>
+            <div class="home-sect-container">
+                <div class="home-sect-text">
+                    <h2>Angel's Remodeling</h2>
+                    <p>Bring your vision to life with our professional construction and remodeling services. Whether
+                        it’s a
+                        patio, deck, or a complete outdoor makeover, we build spaces that blend style and functionality.
+                    </p>
+                </div>
+                <div class="home-icon">
+                    <img src="ConstructionLogo.png" alt="ConstructionIcon" class="business-icon">
+                </div>
+            </div>
         </section>
         <section class="cleaning-section">
-            <h2>Angel's Cleaning Services</h2>
+            <div class="home-sect-container">
+                <div class="home-sect-text">
+                    <h2>Angel's Cleaning Services</h2>
+                    <p>Ensure a spotless and welcoming environment with our comprehensive cleaning services. Working
+                        commercially, we tailor our solutions to meet your needs with exceptional care.</p>
+                </div>
+                <div class="home-icon">
+                    <img src="CleaningLogo.png" alt="CleaningIcon" class="business-icon">
+                </div>
+            </div>
         </section>
     </main>
     <script src="home.js"></script>
@@ -62,7 +95,8 @@
             </div>
             <div class="forms-of-payment">
                 <h2>Forms of Payment</h2>
-                <h3 class="payment-number">Call<a href="tel:(708)639-8414" class="phone-number">(708)&nbsp;639&#8209;8414</a>to make any card payments over the phone.</h3>
+                <h3 class="payment-number">Call<a href="tel:(708)639-8414"
+                        class="phone-number">(708)&nbsp;639&#8209;8414</a>to make any card payments over the phone.</h3>
                 <ul>
                     <li>American Express</li>
                     <li>Personal Checks</li>
@@ -91,4 +125,5 @@
         </div>
     </footer>
 </body>
+
 </html>
