@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdf7ef;
+  }
+
+h1, h2, h3{
+    font-family: 'Newsreader', serif;
+    font-weight: 300;
+}
+
+#beginning{
+    font-size: 14px;
+}
+  
+.home-head {
+    position: fixed;
+    width: 100%;
+    background-color: #fdf7ef;
+    z-index: 2;
+  }
+  
+  .logo {
+    display: block;
+    margin-top: 5px;
+    height: 30px;
+    margin-left: -70px;
+  }
+
+/* Hamburger Section */
+
+header {
+    background-color: #fdf7ef;
+    color: rgb(141, 3, 3);
+    padding: 10px;
+    font-family: 'Newsreader', serif;
+    font-size: 10px;
+}
+
+.bar-stuff p {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.topnav a.active {
+    color: #3e5b3a;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+
+.icon {
+    color: black;
+    font-size: 20px;
+    padding: 10px 10px 5px 10px;
+}
+
+#myLinks {
+    display: none;
+    z-index: 1000;
+}
+
+#myLinks a {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: black;
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#myLinks a:hover {
+    color: #3e5b3a;
+}
+
+
+
+
+/* Footer */
+footer{
+    padding: 30px;
+    background-color: #2c402a;
+    color: #FFFAE0;;
+}
+
+.main-footer{
+    display: flex;
+    gap: 100px;
+}
+
+.main-footer li{
+    padding: 5px;
+    font-weight: 300;
+    list-style-type: circle;
+}
+
+.main-footer a{
+    color: #FFFAE0;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.main-footer a:hover{
+    color: #a8b480;
+}
+
+.main-footer h2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.main-footer h3{
+    padding-bottom: 20px;
+}
+
+.contact-us{
+    display: flex;
+    flex-direction: column;
+}
+
+.forms-of-payment{
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-us{
+    display: flex;
+    flex-direction: column;
+}
+
+.end-end{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 300;
+    color: #9e7241;
+}
+
+.end-1{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.end-2{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
