@@ -20,71 +20,76 @@ h1, h2, h3{
     font-size: 14px;
 }
   
-.bar {
+.home-head {
     position: fixed;
     width: 100%;
     background-color: #fdf7ef;
     z-index: 2;
   }
-
-  .bar::before, .bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 0.1px;
-    background-color: #cbc4c4; 
-}
-
-.bar::after {
-    bottom: 0px;
-}
-  
-  .bar-stuff {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: relative;
-  }
-  
-  .bar-left, .bar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .bar-left a {
-    text-decoration: none;
-    justify-content: space-between;
-    margin-left: 30px;
-    padding: 1px 5px;
-    color: black;
-  }
-
- .phone-icon{
-    padding-right: 10px;
-    height: 20px;
-  }
-
-  .bar-left .director:hover {
-    color: #3e5b3a;
-}
-
- .bar-right .phone-number:hover {
-    color: #3e5b3a;
-}
-  
-.bar-right .phone-number {
-    padding-right: 30px;
-    color: black;
-    text-decoration: none;
-    transition: color;
-  }
   
   .logo {
+    display: block;
     margin-top: 5px;
     height: 30px;
   }
+
+/* Hamburger Section */
+
+header {
+    background-color: #fdf7ef;
+    color: rgb(141, 3, 3);
+    padding: 10px;
+    font-family: 'Newsreader', serif;
+    font-size: 10px;
+}
+
+.bar-stuff p {
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.topnav a.active {
+    color: #3e5b3a;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+
+.icon {
+    color: black;
+    font-size: 20px;
+    padding: 10px 10px 5px 10px;
+}
+
+#myLinks {
+    display: none;
+    z-index: 1000;
+}
+
+#myLinks a {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: black;
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#myLinks a:hover {
+    color: #3e5b3a;
+}
 
 /* Eye-catcher */
 .eye-catcher {
