@@ -92,7 +92,82 @@ header {
     color: #3e5b3a;
 }
 
+/* Eye-catcher */
+.eye-catcher-remod {
+    padding-top: 65px;
+}
 
+.constructionMain {
+    width: 100%;
+}
+
+.eye-catcher-pic {
+    background-image: url('construction1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.eye-catcher-pic h1 {
+    font-size: 80px; 
+    font-weight: 600;
+    background: #956e2fa2;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.button {
+    color: #fdf7ef;
+    background-color: #654922;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 150px;
+    font-size: 30px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* Service Category and Explanation */
+.construction-type {
+    margin: 20px auto;
+    padding: 20px;
+    padding-left: 60px;
+}
+
+.construction-type h2 {
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    text-align: right;
+    color: #654922;
+    text-decoration: underline;
+}
+
+.service-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.construction-type h3 {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px;
+    color: #654922;
+}
+
+.construction-type p {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    width: 70%;
+}
 
 
 /* Footer */
