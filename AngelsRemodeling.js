@@ -10,3 +10,19 @@ function toggleMenu() {
         logo.style.display = "none";
     }
 }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const flipContainers = document.querySelectorAll(".flip-container");
+
+        flipContainers.forEach(container => {
+            container.addEventListener("click", () => {
+                container.classList.toggle("flipped");
+
+                flipContainers.forEach(otherContainer => {
+                    if (otherContainer !== container) {
+                        otherContainer.classList.remove("flipped");
+                    }
+                });
+            });
+        });
+    });
