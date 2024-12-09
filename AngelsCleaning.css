@@ -92,8 +92,166 @@ header {
     color: #3e5b3a;
 }
 
+/* Header Section */
+.eyecatcher-clean {
+    padding: 30px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021651;
+    color: #FFFAE0;
+}
 
+.cleaning-eyecatcher-text {
+    flex: 1;
+    padding: 20px;
+}
 
+.cleaning-eyecatcher-text h1 {
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background-color: #18acd4;
+    color: #021651;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.contact-button:hover {
+    background-color: #a8b480;
+}
+
+.cleaning-image {
+    flex: 1;
+    text-align: center;
+}
+
+.cleaning-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Services Offered */
+.services-offered {
+    display: flex;
+    padding: 40px;
+}
+
+.services-offered h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #1282ad;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    color: #f9f9f9;
+    margin-left: 60px;
+}
+
+.service h3 {
+    font-size: 25px;
+    font-weight: 350;
+    text-decoration-line: underline;
+    margin-bottom: 20px;
+}
+
+.service {
+    background-color: #0c5683;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Products */
+.products {
+    padding: 30px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 30px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-list img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Examples */
+.examples {
+    padding: 30px;
+    text-align: right;
+}
+
+.examples h2 {
+    font-size: 30px;
+}
+
+.examplesAreas {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* FAQ */
+.FAQ {
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.FAQ h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #432a07;
+}
+
+.FAQ-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.FAQ-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #432a07;
+}
+
+.FAQ-list li:last-child {
+    border-bottom: none; 
+}
+
+.FAQ-list strong {
+    font-size: 20px;
+    color: #432a07;
+    margin-bottom: 5px;
+}
+
+.FAQ-list p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #654922;
+    margin-left: 20px;
+}
 
 /* Footer */
 footer{
