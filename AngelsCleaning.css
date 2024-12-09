@@ -141,13 +141,15 @@ header {
 /* Services Offered */
 .services-offered {
     display: flex;
-    padding: 50px;
+    padding: 80px;
+    padding-right: 120px;
 }
 
 .services-offered h2 {
     font-size: 40px;
     font-weight: 500;
     color: #1282ad;
+    margin-right: 120px;
 }
 
 .service h3 {
@@ -220,20 +222,52 @@ header {
     color: #031656;
 }
 
+.why-these p {
+    font-size: 18px;
+}
+
 /* Examples */
 .examples {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
     padding: 30px;
-    text-align: right;
+    justify-content: end;
 }
 
 .examples h2 {
     font-size: 40px;
+    margin-left: 120px;
+    text-align: right;
+    padding: 50px;
+    color: #021651;
 }
 
 .examplesAreas {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 50px;
     margin-top: 20px;
+    justify-content: center;
+}
+
+.place-lo {
+    border: 3px solid #0c5683;
+    border-radius: 10px; 
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.place-lo h3 {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px;
+    color: #0c5683;
 }
 
 /* FAQ */

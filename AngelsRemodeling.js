@@ -16,8 +16,10 @@ function toggleMenu() {
 
         flipContainers.forEach(container => {
             container.addEventListener("click", () => {
+                // Flip only the clicked container
                 container.classList.toggle("flipped");
 
+                // Optionally, unflip all others
                 flipContainers.forEach(otherContainer => {
                     if (otherContainer !== container) {
                         otherContainer.classList.remove("flipped");
@@ -26,3 +28,4 @@ function toggleMenu() {
             });
         });
     });
+</script>
