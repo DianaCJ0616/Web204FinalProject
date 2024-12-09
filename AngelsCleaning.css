@@ -141,20 +141,13 @@ header {
 /* Services Offered */
 .services-offered {
     display: flex;
-    padding: 40px;
+    padding: 50px;
 }
 
 .services-offered h2 {
     font-size: 40px;
     font-weight: 500;
     color: #1282ad;
-}
-
-.services {
-    display: flex;
-    gap: 20px;
-    color: #f9f9f9;
-    margin-left: 60px;
 }
 
 .service h3 {
@@ -166,23 +159,29 @@ header {
 
 .service {
     background-color: #0c5683;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
+    gap: 20px;
+    color: #f9f9f9;
+    margin-left: 60px;
+}
+
+.service p {
+    font-size: 15px;
 }
 
 /* Products */
 .products {
     padding: 30px;
     text-align: center;
+    background-color: #02165151;
 }
 
 .products h2 {
     font-size: 40px;
-}
-
-.products h3 {
-    font-size: 25px;
+    color: #031656;
+    font-weight: 500;
 }
 
 .product-list {
@@ -206,14 +205,19 @@ header {
     font-size: 18px;
 }
 
-.product-list li:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 .products h3 {
     font-size: 25px;
     margin: 30px;
     font-weight: 400;
+    text-decoration: underline;
+}
+
+.why-these {
+    text-align: center;
+    margin: 30px auto;
+    width: 60%;
+    text-align: center;
+    color: #031656;
 }
 
 /* Examples */
