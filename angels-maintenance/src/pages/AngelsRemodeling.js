@@ -12,6 +12,40 @@ function AngelsRemodeling() {
     });
   };
 
+  const [expandedFAQ, setExpandedFAQ] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setExpandedFAQ((prev) => (prev === index ? null : index));
+  };
+
+  const faqs = [
+    {
+      question: "What types of remodeling services do you offer?",
+      answer:
+        "We specialize in residential and commercial remodeling, including kitchen renovations, bathroom upgrades, room additions, and complete home makeovers. No project is too big or small for our team.",
+    },
+    {
+      question: "How long does a typical remodeling project take?",
+      answer:
+        "Yes! We offer free, no-obligation estimates. Our team will visit your site, discuss your vision, and provide an accurate estimate for the work.",
+    },
+    {
+      question: "Can I make changes to the design during the project?",
+      answer:
+        "We understand that ideas evolve. While we encourage finalizing plans before construction begins, minor adjustments can be accommodated. Keep in mind that changes may affect the timeline and budget.",
+    },
+    {
+      question: "How much will my remodeling project cost?",
+      answer:
+        "Costs vary based on the size and complexity of the project, materials, and labor. During the initial consultation, we provide a transparent quote tailored to your needs and budget.",
+    },
+    {
+      question: "How do I get started with my remodeling project?",
+      answer:
+        "It’s easy! Contact us through our website or call us directly to schedule a consultation. We’ll guide you through every step, from planning to completion.",
+    },
+  ];
+
   return (
     <div id="beginning">
       <main>
@@ -55,8 +89,9 @@ function AngelsRemodeling() {
           <div id="before-after">
             <h3>Before<br />vs.<br />After</h3>
           </div>
+          <p>Click each image to see</p>
           <div className="flip-gallery">
-            {[1, 2, 3, 4, 5, 6].map((num, index) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num, index) => (
               <div
                 key={num}
                 className={`flip-container ${flippedStates[index] ? "flipped" : ""}`}
@@ -85,36 +120,23 @@ function AngelsRemodeling() {
         <section className="FAQ">
           <h2>Frequently Asked Questions</h2>
           <ul className="FAQ-list">
-            {[
-              {
-                question: "What types of remodeling services do you offer?",
-                answer:
-                  "We specialize in residential and commercial remodeling, including kitchen renovations, bathroom upgrades, room additions, and complete home makeovers. No project is too big or small for our team.",
-              },
-              {
-                question: "How long does a typical remodeling project take?",
-                answer:
-                  "Yes! We offer free, no-obligation estimates. Our team will visit your site, discuss your vision, and provide an accurate estimate for the work.",
-              },
-              {
-                question: "Can I make changes to the design during the project?",
-                answer:
-                  "We understand that ideas evolve. While we encourage finalizing plans before construction begins, minor adjustments can be accommodated. Keep in mind that changes may affect the timeline and budget.",
-              },
-              {
-                question: "How much will my remodeling project cost?",
-                answer:
-                  "Costs vary based on the size and complexity of the project, materials, and labor. During the initial consultation, we provide a transparent quote tailored to your needs and budget.",
-              },
-              {
-                question: "How do I get started with my remodeling project?",
-                answer:
-                  "It’s easy! Contact us through our website or call us directly to schedule a consultation. We’ll guide you through every step, from planning to completion. vary based on the size and complexity of the project, materials, and labor. During the initial consultation, we provide a transparent quote tailored to your needs and budget.",
-              },
-            ].map(({ question, answer }, index) => (
-              <li key={index}>
-                <strong>{question}</strong>
-                <p>{answer}</p>
+            {faqs.map((faq, index) => (
+              <li key={index} className="FAQ-item">
+                <div
+                  className="FAQ-question"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <strong>{faq.question}</strong>
+                  <span className={`arrow ${expandedFAQ === index ? "open" : ""}`}>
+                    ▼
+                  </span>
+                </div>
+                <div
+                  className={`FAQ-answer ${expandedFAQ === index ? "expanded" : ""
+                    }`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
               </li>
             ))}
           </ul>

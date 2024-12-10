@@ -22,16 +22,19 @@
 }
 
 .contact-button {
-    background-color: #18acd4;
+    text-decoration: none;
     color: #021651;
+    background-color: #18acd4;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 17px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-button:hover {
-    background-color: #a8b480;
+    background-color: #80aab4;
 }
 
 .cleaning-image {
@@ -135,9 +138,9 @@
 /* Examples */
 .examples {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
-    padding: 30px;
+    padding: 40px;
     justify-content: end;
 }
 
@@ -149,6 +152,11 @@
     color: #021651;
 }
 
+.examples h3 {
+    font-size: 20px;
+    padding: 20px;
+}
+
 .examplesAreas {
     display: flex;
     flex-wrap: wrap;
@@ -158,29 +166,97 @@
 }
 
 .place-lo {
-    border: 3px solid #0c5683;
-    border-radius: 10px; 
-    padding: 20px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
     text-align: center;
+    padding: 40px;
+    border: 5px solid #0c5683;
+    border-radius: 10px;
 }
 
-.place-lo h3 {
-    font-size: 30px;
-    font-weight: 500;
+.place-lo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 40, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #ffffff;
     padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
     color: #0c5683;
 }
 
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+.close-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0c5683;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #1282ad;
+}
+
+
 /* FAQ */
+
 .FAQ {
     padding: 30px;
     padding-left: 50px;
     padding-right: 50px;
+    border: 1px solid #654922;
 }
 
 .FAQ h2 {
@@ -195,25 +271,151 @@
     padding: 0;
 }
 
-.FAQ-list li {
+.FAQ-item {
     margin-bottom: 20px;
-    padding: 10px;
     border-bottom: 1px solid #432a07;
 }
 
-.FAQ-list li:last-child {
-    border-bottom: none; 
+.FAQ-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.FAQ-list strong {
+.FAQ-question strong {
     font-size: 20px;
     color: #432a07;
-    margin-bottom: 5px;
 }
 
-.FAQ-list p {
+.FAQ-question .arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    color: #0c5683;
+}
+
+.FAQ-question .arrow.open {
+    transform: rotate(180deg);
+}
+
+.FAQ-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+.FAQ-answer.expanded {
+    max-height: 200px;
+    opacity: 1;
+    padding: 10px 10px;
+}
+
+.FAQ-answer p {
     font-size: 15px;
     line-height: 1.5;
     color: #654922;
-    margin-left: 20px;
+    margin: 0;
+}
+
+@media only screen and (max-width: 793px) {
+    .cleaning-eyecatcher-text h1 {
+        font-size: 50px;
+    }
+
+    .services-offered {
+        display: flex;
+        padding: 50px;
+    }
+
+    .services-offered h2 {
+        font-size: 40px;
+        font-weight: 500;
+        color: #1282ad;
+        margin-right: 0px;
+    }
+
+    .examples h2 {
+        font-size: 40px;
+        margin-left: 0px;
+        text-align: right;
+        padding: 30px;
+        color: #021651;
+    }
+}
+
+
+@media only screen and (max-width: 583px) {
+    .cleaning-eyecatcher-text h1 {
+        font-size: 40px;
+    }
+
+    .services-offered {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .service {
+        background-color: #0c5683;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        gap: 20px;
+        color: #f9f9f9;
+        margin-left: 0px;
+    }
+
+    .services-offered h2 {
+        font-size: 35px;
+        padding-bottom: 20px;
+        font-weight: 500;
+        color: #1282ad;
+        text-align: center;
+    }
+
+    .examples {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 40px;
+        justify-content: end;
+    }
+
+    .examples h2 {
+        font-size: 40px;
+        margin-left: 0px;
+        text-align: center;
+        padding: 20px;
+        color: #021651;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .eyecatcher-clean {
+        padding: 30px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .contact-button {
+        margin-left: 60px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    list-style: none;
+}
 }
