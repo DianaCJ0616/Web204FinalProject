@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/AngelsRemodeling.css";
 
 function AngelsRemodeling() {
+  const [flippedStates, setFlippedStates] = useState(Array(6).fill(false));
+
+  const handleFlip = (index) => {
+    setFlippedStates((prev) => {
+      const updatedStates = [...prev];
+      updatedStates[index] = !updatedStates[index];
+      return updatedStates;
+    });
+  };
+
   return (
     <div id="beginning">
       <main>
         <section className="eye-catcher-remod">
           <div className="eye-catcher-pic">
             <h1>Where Ideas<br />Become<br />Structures</h1>
-            <p className="button">+ Contact Us</p>
+            <a href="tel:7084747120" className="button-remod">+ Contact Us</a>
           </div>
         </section>
         <section className="construction-type">
@@ -46,8 +56,12 @@ function AngelsRemodeling() {
             <h3>Before<br />vs.<br />After</h3>
           </div>
           <div className="flip-gallery">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className="flip-container">
+            {[1, 2, 3, 4, 5, 6].map((num, index) => (
+              <div
+                key={num}
+                className={`flip-container ${flippedStates[index] ? "flipped" : ""}`}
+                onClick={() => handleFlip(index)}
+              >
                 <div className="flipper">
                   <div className="front">
                     <img

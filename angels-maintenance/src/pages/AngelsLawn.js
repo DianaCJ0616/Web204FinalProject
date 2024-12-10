@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/AngelsLawn.css";
 
 const reviews = [
@@ -74,6 +74,16 @@ const reviews = [
 ];
 
 function Lawn() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const handlePrev = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
+    };
+  
+    const handleNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
+    };
+
   return (
     <div id="beginning">
       <main>
@@ -84,7 +94,7 @@ function Lawn() {
               <h1 className="headline">Guaranteed</h1>
             </div>
             <p className="subtext">Transforming and revitalizing your residence since 1999.</p>
-            <p className="button-lawn">+ Get a Free Estimate</p>
+            <a href="tel:7084747120" className="button-lawn">+ Get a Free Estimate</a>
           </div>
           <div className="top-image">
             <img
@@ -170,22 +180,24 @@ function Lawn() {
               transformed outdoor spaces and service experiences.
             </h3>
           </div>
-          <div className="all-reviews-lawn">
-            {reviews.map((review, index) => (
-              <div key={index} className="reviews-lawn">
-                <p className="name-lawn">{review.name}</p>
-                <div className="stars-lawn">
-                  {[...Array(review.stars)].map((_, i) => (
-                    <span key={i} className="fa fa-star checked-lawn"></span>
-                  ))}
-                  {[...Array(5 - review.stars)].map((_, i) => (
-                    <span key={i} className="fa fa-star-lawn"></span>
-                  ))}
-                </div>
-                <p className="review-lawn">"{review.review}"</p>
-                <p className="date-lawn">{review.date}</p>
+          <div className="review-slider">
+            <div className="reviews-lawn">
+              <p className="name-lawn">{reviews[currentIndex].name}</p>
+              <div className="stars-lawn">
+                {[...Array(reviews[currentIndex].stars)].map((_, i) => (
+                  <span key={i} className="fa fa-star checked-lawn"></span>
+                ))}
+                {[...Array(5 - reviews[currentIndex].stars)].map((_, i) => (
+                  <span key={i} className="fa fa-star"></span>
+                ))}
               </div>
-            ))}
+              <p className="review-lawn">"{reviews[currentIndex].review}"</p>
+              <p className="date-lawn">{reviews[currentIndex].date}</p>
+            </div>
+            <div className="slider-controls">
+              <button onClick={handlePrev} className="slider-arrow">&lt;</button>
+              <button onClick={handleNext} className="slider-arrow">&gt;</button>
+            </div>
           </div>
         </section>
         <section className="client-transformation">

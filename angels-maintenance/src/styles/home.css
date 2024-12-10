@@ -73,6 +73,15 @@
     padding-bottom: 70px;
 }
 
+.business-icon {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .business-icon:hover {
+    transform: scale(1.2);
+  }
+
 /* Footer */
 footer{
     padding: 30px;

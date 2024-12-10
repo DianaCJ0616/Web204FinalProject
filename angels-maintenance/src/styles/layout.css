@@ -48,7 +48,8 @@ header {
     padding-top: 10px;
     font-size: 20px;
     color: rgb(139, 7, 7);
-} 
+}
+
   /* Padding for Lawn Page */
   .page-title.lawn {
     padding-right: 47px;
@@ -83,12 +84,6 @@ header {
 }
 
 .icon {
-    color: black;
-    font-size: 20px;
-    padding: 10px 10px 5px 10px;
-}
-
-.icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -98,33 +93,52 @@ header {
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-top: 8px;
+    z-index: 110;
   }
-  
+
   .icon .bar {
     width: 100%;
     height: 4px;
     background-color: black;
     border-radius: 2px;
-  }  
-
-#myLinks {
-    display: none;
-    z-index: 1000;
 }
 
-#myLinks a {
+  #myLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fdf7ef;
+    transform: translateY(-100%);
+    height: 0;
+    overflow: hidden;
+    transition: transform 0.4s ease, height 0.4s ease;
+    z-index: 100;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+  }
+
+  #myLinks.open {
+    transform: translateY(0);
+    height: 100%;
+  }
+  
+  #myLinks a {
+    display: block;
     padding: 20px;
     color: black;
-    align-items: center;
+    text-align: center;
     text-decoration: none;
     font-size: 40px;
-}
-
-#myLinks a:hover {
-    color: #3e5b3a;
-}
+  }
+  
+  #myLinks a:hover {
+    color: #62761b;
+  }
 
 /* Footer */
 footer{

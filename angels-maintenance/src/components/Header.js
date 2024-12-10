@@ -20,6 +20,10 @@ function Header() {
     setMenuOpen(!menuOpen);   
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="home-head">
       <div className="bar-stuff">
@@ -32,18 +36,32 @@ function Header() {
               className="logo"
             />
           </div>
-          <button className="icon" onClick={toggleMenu} aria-label="Toggle Menu">
+          <button
+            className="icon"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </button>
         </div>
-        <nav id="myLinks" style={{ display: menuOpen ? "block" : "none" }}>
-          <Link to="/">Home Menu</Link>
-          <Link to="/lawn">Angel's Lawn Maintenance</Link>
-          <Link to="/remodeling">Angel's Remodeling</Link>
-          <Link to="/cleaning">Angel's Cleaning Services</Link>
-          <a href="tel:(708)474-7120">(708) 474-7120</a>
+        <nav id="myLinks" className={menuOpen ? "open" : ""}>
+          <Link to="/" onClick={closeMenu}>
+            Home Menu
+          </Link>
+          <Link to="/lawn" onClick={closeMenu}>
+            Angel's Lawn Maintenance
+          </Link>
+          <Link to="/remodeling" onClick={closeMenu}>
+            Angel's Remodeling
+          </Link>
+          <Link to="/cleaning" onClick={closeMenu}>
+            Angel's Cleaning Services
+          </Link>
+          <a href="tel:(708)474-7120" onClick={closeMenu}>
+            (708) 474-7120
+          </a>
         </nav>
       </div>
     </header>

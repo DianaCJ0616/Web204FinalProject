@@ -30,9 +30,13 @@
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px; 
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.button:hover {
+.button-lawn:hover {
+    transform: scale(1.2);
     background-color: #C3A87F;
 }
 
@@ -210,37 +214,50 @@
 
 .all-reviews-lawn{
     display: flex;
-    overflow-x: scroll;
     gap: 20px;
     padding-top: 60px;
     padding-left: 20px;
     padding-bottom: 60px;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #3e5b3a #fdf7ef; 
 }
 
-.all-reviews-lawn::-webkit-scrollbar {
-    height: 8px; 
-}
-
-.all-reviews-lawn::-webkit-scrollbar-thumb {
-    background-color: #ccc; 
-    border-radius: 10px;
-}
-
-.all-reviews-lawn::-webkit-scrollbar-track {
-    background-color: #fdf7ef; 
-}
+.review-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .slider-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 20px;
+  }
+  
+  .slider-arrow {
+    background-color: #87551D;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .slider-arrow:hover {
+    background-color: #3e5b3a;
+  }
 
 .reviews-lawn{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    padding-bottom: 130px;
+    height: 400px;
     border: 1px solid #3e5b3a;
-    min-width: 350px;
+    width: 350px;
     position: relative;
 }
 

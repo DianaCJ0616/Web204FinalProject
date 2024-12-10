@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/home.css";
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => (event) => {
+    event.preventDefault();
+    navigate(path);
+  };
+
   return (
     <div className="home-h2">
       <main>
@@ -35,8 +43,15 @@ function Home() {
                 custom designs, we create vibrant, healthy lawns that stand out.
               </p>
             </div>
-            <div className="home-icon">
-              <img src={`${process.env.PUBLIC_URL}/LawnLogo.png`} alt="Lawn Icon" className="business-icon" />
+            <div
+              className="home-icon"
+              onClick={handleNavigation("/lawn")}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/LawnLogo.png`}
+                alt="Lawn Icon"
+                className="business-icon"
+              />
             </div>
           </div>
         </section>
@@ -51,8 +66,15 @@ function Home() {
                 functionality.
               </p>
             </div>
-            <div className="home-icon">
-              <img src={`${process.env.PUBLIC_URL}/ConstructionLogo.png`} alt="Construction Icon" className="business-icon" />
+            <div
+              className="home-icon"
+              onClick={handleNavigation("/remodeling")}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/ConstructionLogo.png`}
+                alt="Construction Icon"
+                className="business-icon"
+              />
             </div>
           </div>
         </section>
@@ -66,8 +88,15 @@ function Home() {
                 our solutions to meet your needs with exceptional care.
               </p>
             </div>
-            <div className="home-icon">
-              <img src={`${process.env.PUBLIC_URL}/CleaningLogo.png`} alt="Cleaning Icon" className="business-icon" />
+            <div
+              className="home-icon"
+              onClick={handleNavigation("/cleaning")}
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/CleaningLogo.png`}
+                alt="Cleaning Icon"
+                className="business-icon"
+              />
             </div>
           </div>
         </section>

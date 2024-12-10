@@ -6,13 +6,16 @@ import Home from "./pages/Home";
 import AngelsCleaning from "./pages/AngelsCleaning";
 import AngelsLawn from "./pages/AngelsLawn";
 import AngelsRemodeling from "./pages/AngelsRemodeling";
+import ScrollToTop from "./components/ScrollToTop";
 import "./styles/layout.css";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
+        <Route path="/Web204FinalProject" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/cleaning" element={<AngelsCleaning />} />
         <Route path="/lawn" element={<AngelsLawn />} />
