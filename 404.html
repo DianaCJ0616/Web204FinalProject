@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+      var redirectTo = window.location.pathname;
+      if (redirectTo !== "/") {
+        window.location.replace("/Web204FinalProject" + redirectTo);
+      }
+    </script>
   </head>
   <body>
     Redirecting...
