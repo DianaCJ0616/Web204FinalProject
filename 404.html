@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
-    <script>
+    <script type="text/javascript">
       var redirectTo = window.location.pathname;
-      if (redirectTo !== "/") {
-        window.location.replace("/Web204FinalProject" + redirectTo);
+
+      if (redirectTo.startsWith('/Web204FinalProject')) {
+        window.location.replace("/Web204FinalProject#" + redirectTo.substring('/Web204FinalProject'.length));
+      } else {
+        window.location.replace("/Web204FinalProject#/");
       }
     </script>
   </head>
