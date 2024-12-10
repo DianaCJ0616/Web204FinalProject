@@ -110,6 +110,7 @@ function CleaningService() {
                 </div>
               ))}
             </div>
+            <div className="title-info">
             <h2>
               Where We
               <br />
@@ -119,6 +120,8 @@ function CleaningService() {
               <br />
               Worked
             </h2>
+            <p>(Click box for more info)</p>
+            </div>
           {selectedPlace && (
             <div className="modal-overlay show" onClick={() => setSelectedPlace(null)}>
               <div className="modal-content" onClick={(e) => e.stopPropagation()}>
