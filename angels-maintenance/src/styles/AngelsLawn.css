@@ -440,13 +440,17 @@
     border-radius: 5px;
   }
   
-  .identifyBut:hover {
-    transform: scale(1.2);
+  .identifyBut button:hover {
     background-color: #3e5b3a;
   }
 
   .buttonContainer {
     margin-bottom: 30px;
+  }
+
+  .buttonContainer:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
 @media screen and (max-width: 810px) {

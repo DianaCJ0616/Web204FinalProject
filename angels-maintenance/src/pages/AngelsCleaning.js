@@ -55,7 +55,9 @@ function CleaningService() {
                 <br />
                 A Brighter Day
               </h1>
+              <div className="buttonContain">
               <a href="tel:7084747120" className="contact-button">+ Contact Us</a>
+            </div>
             </div>
             <div className="cleaning-image">
               <img

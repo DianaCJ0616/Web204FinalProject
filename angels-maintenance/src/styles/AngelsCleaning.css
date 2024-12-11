@@ -37,6 +37,11 @@
     background-color: #80aab4;
 }
 
+.buttonContain:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .cleaning-image {
     flex: 1;
     text-align: center;
