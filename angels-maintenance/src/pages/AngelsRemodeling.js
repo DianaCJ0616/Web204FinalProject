@@ -27,7 +27,7 @@ function AngelsRemodeling() {
     {
       question: "How long does a typical remodeling project take?",
       answer:
-        "Yes! We offer free, no-obligation estimates. Our team will visit your site, discuss your vision, and provide an accurate estimate for the work.",
+        "Time ranges depending on the kind of project you are looking for. When we organize an estimate with you, we will be entirely transparent about the entire process and timelines.",
     },
     {
       question: "Can I make changes to the design during the project?",
