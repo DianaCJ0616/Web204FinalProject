@@ -1,0 +1,44 @@
+.plantNet {
+  padding-top: 100px;
+  height: 1000px;
+}
+
+.interactiveStuff {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.plantNet h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #3e5b3a;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+.plantNet button {
+  padding: 10px 20px;
+  background-color: #5c8856;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1b3d42;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}

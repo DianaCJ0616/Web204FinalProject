@@ -9,6 +9,7 @@ function Header() {
   const pageTitles = {
     "/": "Home Page",
     "/lawn": "Lawn",
+    "/plants": "Plants",
     "/remodeling": "Construction",
     "/cleaning": "Cleaning",
   };
@@ -52,6 +53,9 @@ function Header() {
           </Link>
           <Link to="/lawn" onClick={closeMenu}>
             Angel's Lawn Maintenance
+          </Link>
+          <Link to="/plants" onClick={closeMenu}>
+            Identify Your Plant
           </Link>
           <Link to="/remodeling" onClick={closeMenu}>
             Angel's Remodeling

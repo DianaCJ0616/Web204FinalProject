@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -7,6 +7,7 @@ import AngelsCleaning from "./pages/AngelsCleaning";
 import AngelsLawn from "./pages/AngelsLawn";
 import AngelsRemodeling from "./pages/AngelsRemodeling";
 import ScrollToTop from "./components/ScrollToTop";
+import PlantNet from "./components/PlantNet";
 import "./styles/layout.css";
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
       <ScrollToTop />
       <Header />
       <Routes>
-        <Route path="/Web204FinalProject" element={<Home />} />
         <Route path="/" element={<Home />} />
+        <Route path="/plants" element={<PlantNet />} />
         <Route path="/cleaning" element={<AngelsCleaning />} />
         <Route path="/lawn" element={<AngelsLawn />} />
         <Route path="/remodeling" element={<AngelsRemodeling />} />
