@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/AngelsLawn.css";
 
 const reviews = [
@@ -74,15 +75,15 @@ const reviews = [
 ];
 
 function Lawn() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    const handlePrev = () => {
-      setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
-    };
-  
-    const handleNext = () => {
-      setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
-    };
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? reviews.length - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === reviews.length - 1 ? 0 : prevIndex + 1));
+  };
 
   return (
     <div id="beginning">
@@ -104,22 +105,22 @@ function Lawn() {
             />
           </div>
           <div className="bar-under-img">
-                <ul>
-                    <li>Receive a free estimate within 5 business days.</li>
-                    <li>Estimates given on the spot.</li>
-                    <li>See progress within weeks.</li>
-                    <li>Be the envy of your neighborhood.</li>
-                    <li>You ask, we do.</li>
-                    <li>Satisfaction Guaranteed.</li>
+            <ul>
+              <li>Receive a free estimate within 5 business days.</li>
+              <li>Estimates given on the spot.</li>
+              <li>See progress within weeks.</li>
+              <li>Be the envy of your neighborhood.</li>
+              <li>You ask, we do.</li>
+              <li>Satisfaction Guaranteed.</li>
 
-                    <li>Receive a free estimate within 5 business days.</li>
-                    <li>Estimates given on the spot.</li>
-                    <li>See progress within weeks.</li>
-                    <li>Be the envy of your neighborhood.</li>
-                    <li>You ask, we do.</li>
-                    <li>Satisfaction Guaranteed.</li>
-                </ul>
-            </div>
+              <li>Receive a free estimate within 5 business days.</li>
+              <li>Estimates given on the spot.</li>
+              <li>See progress within weeks.</li>
+              <li>Be the envy of your neighborhood.</li>
+              <li>You ask, we do.</li>
+              <li>Satisfaction Guaranteed.</li>
+            </ul>
+          </div>
         </section>
         <section className="about-us">
           <div className="about-us-stuff">
@@ -217,6 +218,26 @@ function Lawn() {
           <div className="transformations-bar">
             <h3>1000+ Yards</h3>
             <h3>Transformed</h3>
+          </div>
+        </section>
+        <section className="identifyThatPlant">
+          <h2>Identify That Plant!</h2>
+          <div className="plant-identify">
+            <div className="identify-text">
+              <p>
+                Have you ever wondered what type of plant is growing in your yard? Or perhaps you're
+                curious about a plant you've seen somewhere else. Now you can find out!
+              </p>
+              <p className="last-p">
+                Upload a picture of the plant, and our plant identification tool will tell you what you need to know.
+              </p>
+              <div className="buttonContainer">
+                <Link to="/plants" className="identifyBut">
+                  Identify Your Plant Now
+                </Link>
+
+              </div>
+            </div>
           </div>
         </section>
       </main>

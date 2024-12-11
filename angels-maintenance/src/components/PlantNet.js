@@ -62,7 +62,9 @@ const PlantNet = () => {
       <div className="interactiveStuff">
         <div className="inputing">
           <input type="file" onChange={handleImageUpload} accept="image/*" />
-          <button className="plant-button" onClick={identifyPlant}>Identify Plant</button>
+          <div className="buttonDiv">
+            <button className="plant-button" onClick={identifyPlant}>Identify Plant</button>
+          </div>
         </div>
         <div className="identifying">
           {loading && <p>Identifying plant...</p>}
