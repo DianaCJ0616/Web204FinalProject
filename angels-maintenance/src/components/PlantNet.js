@@ -58,25 +58,30 @@ const PlantNet = () => {
 
   return (
     <div className="plantNet">
-      <h2>Idenitfy Your Plant!</h2>
+      <h2>Identify Your Plant!</h2>
       <div className="interactiveStuff">
-        <input type="file" onChange={handleImageUpload} accept="image/*" />
-        <button onClick={identifyPlant}>Identify Plant</button>
-
-        {loading && <p>Identifying plant...</p>}
-
+        <div className="inputing">
+          <input type="file" onChange={handleImageUpload} accept="image/*" />
+          <button className="plant-button" onClick={identifyPlant}>Identify Plant</button>
+        </div>
+        <div className="identifying">
+          {loading && <p>Identifying plant...</p>}
+        </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         {plantData && (
-          <div>
+          <div className="identification-results">
             <h3>Identification Results:</h3>
             <ul>
               {plantData.results.map((result, index) => (
                 <li key={index}>
-                  <strong>{result.species.scientificNameWithoutAuthor}</strong> (
-                  {result.species.commonNames?.join(", ") || "No common name"})
-                  <br />
-                  Confidence: {(result.score * 100).toFixed(2)}%
+                  <h4 className="mainResult">{result.species.scientificNameWithoutAuthor}</h4>
+                  <span className="commonName">
+                    ({result.species.commonNames?.join(", ") || "No common name"})
+                  </span>
+                  <span className="confidence">
+                    Confidence: {(result.score * 100).toFixed(2)}%
+                  </span>
                 </li>
               ))}
             </ul>

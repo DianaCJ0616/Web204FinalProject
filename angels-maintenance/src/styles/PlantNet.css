@@ -1,12 +1,25 @@
 .plantNet {
   padding-top: 100px;
-  height: 1000px;
+}
+
+.inputing {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 .interactiveStuff {
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.identifying {
+  padding-left: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .plantNet h2 {
@@ -17,11 +30,27 @@
   justify-content: center;
 }
 
+.plantNet h3 {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.plantNet h4 {
+  font-size: 30px;
+  font-weight: 350;
+  text-decoration: underline;
+}
+
 input[type="file"] {
   margin: 10px 0;
 }
 
-.plantNet button {
+.plant-button {
   padding: 10px 20px;
   background-color: #5c8856;
   color: white;
@@ -30,15 +59,53 @@ input[type="file"] {
   cursor: pointer;
 }
 
-button:hover {
+.plant-button:hover {
   background-color: #1b3d42;
 }
 
-ul {
+.plantNet ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
+  flex-direction: row;
+  gap: 20px;
   padding: 0;
 }
 
-li {
+.plantNet li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #5c8856;
+  padding: 20px;
+  color: #fdf7ef;
+  border: 2px solid #1b3d42;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.plantNet li strong {
+  font-size: 24px;
   margin-bottom: 10px;
+}
+
+.identification-results {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 20px;
+}
+
+.plantNet h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.mainResult, .commonName, .confidence {
+  padding: 20px;
 }
