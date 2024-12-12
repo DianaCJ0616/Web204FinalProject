@@ -88,7 +88,6 @@ function CleaningService() {
             <li>Microfiber Cleaning Cloths</li>
             <li>Eco-Friendly All-Purpose Cleaners</li>
             <li>Glass and Window Cleaners</li>
-            <li>Eco-Friendly All-Purpose Cleaners</li>
           </ul>
           <div className="why-these">
             <h3>Why These Products?</h3>
